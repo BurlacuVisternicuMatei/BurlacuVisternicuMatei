@@ -6,17 +6,17 @@ a = input1.split(" ")
 b = input2.split(" ")
 
 def intersection(x, y):
-    c = []
+    c = set()
 
     for i in range(0, len(x)):
         for j in range(0, len(y)):
             if x[i] == y[j]:
-                c.append(x[i])
+                c.add(x[i])
 
     return c
 
 def reunion(x, y):
-    c = x[:]
+    c = set(x[:])
 
     for i in range(0, len(y)):
         ok = 0
@@ -24,12 +24,12 @@ def reunion(x, y):
             if y[i] == x[j]:
                 ok = 1
         if ok == 0:
-            c.append(y[i])
+            c.add(y[i])
     return c
 
 def aminb(x, y):
 
-    c = []
+    c = set()
 
     for i in range(0, len(x)):
         ok = 0
@@ -37,14 +37,14 @@ def aminb(x, y):
             if x[i] == y[j]:
                 ok = 1
         if ok == 0:
-            c.append(x[i])
+            c.add(x[i])
 
     return c
 
 
 def bmina(x, y):
 
-    c = []
+    c = set()
 
     for i in range(0, len(y)):
         ok = 0
@@ -52,7 +52,7 @@ def bmina(x, y):
             if y[i] == x[j]:
                 ok = 1
         if ok == 0:
-            c.append(y[i])
+            c.add(y[i])
 
     return c
 
